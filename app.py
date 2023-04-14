@@ -130,5 +130,5 @@ def get(url):
     url = urllib.parse.unquote(url)
     if not (url.startswith('http://') or url.startswith('https://')):
         url = 'http://' + url # default to http
-    return clean(requests.get(url))
+    return the_grand_parser(url)
 app.run(port = 80)
