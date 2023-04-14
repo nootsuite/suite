@@ -84,7 +84,41 @@ def parse_audio(url): # Refer to line 79
 # video parsers
 def parse_video(url): # Refer to line 79
     return requests.get(url).content
+# application parsers
+def parse_application(url): # Refer to line 79
+    return requests.get(url).content
 
+# Parsers Dictionary
+parsers = {
+    'text/html': parse_html,
+    'text/plain': parse_text,
+    'text/css': parse_css,
+    'text/javascript': parse_js,
+    'text/markdown': parse_markdown,
+    'image/png': parse_image,
+    'image/jpeg': parse_image,
+    'image/gif': parse_image,
+    'image/svg+xml': parse_image,
+    'image/webp': parse_image,
+    'image/x-icon': parse_image,
+    'audio/mpeg': parse_audio,
+    'audio/ogg': parse_audio,
+    'audio/wav': parse_audio,
+    'audio/webm': parse_audio,
+    'video/mp4': parse_video,
+    'video/ogg': parse_video,
+    'video/webm': parse_video,
+    'application/javascript': parse_application,
+    'application/json': parse_application,
+    'application/pdf': parse_application,
+    'application/xml': parse_application,
+    'application/zip': parse_application,
+}
+
+def the_grand_parser(url): # The grand parser, which parses the URL and returns the parsed content
+    content_type = get_content_type(url)
+    parser = parsers[content_type]
+    return parser(url)
 # App
 app = Flask(__name__)
 @app.route('/')
