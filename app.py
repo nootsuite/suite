@@ -75,7 +75,20 @@ def parse_css(url):
     return requests.get(url).text
 def parse_js(url):
     return requests.get(url).text
-
+# image parsers
+def parse_png(url):
+    return requests.get(url).content
+def parse_jpeg(url):
+    return requests.get(url).content
+def parse_gif(url):
+    return requests.get(url).content
+def parse_svg(url):
+    return requests.get(url).content
+def parse_webp(url):
+    return requests.get(url).content
+def parse_ico(url):
+    return requests.get(url).content
+# audio parsers
 
 
 # App
