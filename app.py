@@ -76,20 +76,14 @@ def parse_css(url):
 def parse_js(url):
     return requests.get(url).text
 # image parsers
-def parse_png(url):
-    return requests.get(url).content
-def parse_jpeg(url):
-    return requests.get(url).content
-def parse_gif(url):
-    return requests.get(url).content
-def parse_svg(url):
-    return requests.get(url).content
-def parse_webp(url):
-    return requests.get(url).content
-def parse_ico(url):
+def parse_image(url): # Generic image parser, as most image formats use the same parsing methods.
     return requests.get(url).content
 # audio parsers
-
+def parse_audio(url): # Refer to line 79
+    return requests.get(url).content
+# video parsers
+def parse_video(url): # Refer to line 79
+    return requests.get(url).content
 
 # App
 app = Flask(__name__)
