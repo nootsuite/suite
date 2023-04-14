@@ -49,7 +49,6 @@ sft = [
 ]
 ```
 ### What about other file types?
-> Notice: `mkv` will not be supported, as it is a container format, not a file format.
 To add support for other file types, you can add them to the `sft` list in `app.py`, then write a parser.
 After that, you can add the parser to the `parsers` dictionary in `app.py`.
 Example entry:
