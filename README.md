@@ -15,5 +15,5 @@ flowchart
     e -->|No| ire
 ```
 ## How do I contribute?
-`o p e n   a   p u l l   r e q u e s t ,  f o r   g o d ' s   s a k e`
+`open a pull request, for god's sake`
 If you make enough contributions, you might become a posh collaborator!
